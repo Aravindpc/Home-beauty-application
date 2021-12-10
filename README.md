@@ -2,8 +2,8 @@
 
 ## Requirements
 For building and running the application you need:
- - [JDK 1.8]()
- - [Maven 3]()
+ - [JDK 1.8](https://www.oracle.com/java/technologies/downloads/)
+ - [Maven 3](https://maven.apache.org/)
 
 ## Running the application locally
 There are several ways to run our Springboot application on your local machine. One way is to execute the 'main' method in the 'com.ourapp.salonapp.SalonApplication' class from your IDE.
