@@ -1,0 +1,178 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Services</title>
+<link rel="stylesheet" href="/css/femaleServices.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+<div class="topnav" id="myTopnav">
+<div class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;" alt="LEVIOOSA MARKETING.">
+</div>
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></div>
+<ul id="logout">
+<li sec:authorize="isAuthenticated()"><a id="idClick" th:href="@{/user/logout}">Logout</a></li></ul>
+<a th:href="@{/user/maleServices}">Male</a>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/user/services}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+
+<!--CONTAINER-->
+<div class="container">
+<div id="success">
+					<div class="alert">
+					<span class="closebtn" onclick="$('#success').hide();">&times;</span> 
+  <strong>Success!</strong> Please book the appointment and see the bill !!
+</div>
+				</div>
+<table>
+<tr>
+<td>
+<section>
+<em>FEMALE SERVICES</em><br><br>
+<div class="dropdown1">  
+   <a  href="/" th:href="@{/user/appointment}"><button class="dropbtn1">Book Appointment</button></a>
+</div>
+
+</section>
+</td>
+<td>
+</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<!--SECTION1-->
+<section class="section1">
+<table>
+<tr>
+<td>
+<h1 class="service-title">Hair</h1>
+</td>
+</tr>
+</table>
+</section>
+
+<!--SECTION2-->
+<section class="section2">
+<div id="hair" class="cards">
+</div>
+</section>
+
+
+
+
+<!--SECTION1-->
+<section class="section1">
+<table>
+<tr>
+<td>
+<h1 class="service-title">Skin</h1>
+</td>
+</tr>
+</table>
+</section>
+
+<!--SECTION2-->
+<section class="section2">
+<div id="skin" class="cards">
+</div>
+</section>
+
+
+
+<!--SECTION1-->
+<section class="section1">
+<table>
+<tr>
+<td>
+<h1 class="service-title">Body</h1>
+</td>
+</tr>
+</table>
+</section>
+
+<!--SECTION2-->
+<section class="section2">
+<div id="body" class="cards">
+</div>
+</section>
+</div>
+         <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+              <tr>
+              <th><strong>Services</strong></th>
+            </tr>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>Rs <span id="total">0</span></td>
+            </tr></table>
+
+           
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <button id="checkout" onclick="produceBill()">Checkout</button>
+          </div>
+        </div>
+
+<!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul id="footer">
+<li><a th:href="@{/user/contact}">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright � 2021 Name- All rights reserved
+</div>
+</div>
+</footer>
+
+
+
+
+
+<!--JAVASCRIPT-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/femaleServices.js"></script>
+</body>
+</html> 

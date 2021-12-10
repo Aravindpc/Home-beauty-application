@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Profile</title>
+<head>
+ <!--ICON-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="/css/stylistpages.css">
+    <style>
+    </style>
+
+    <!--PLUGIN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oswald:wght@300;400&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img id="logo" src="https://i.ibb.co/VVP4G0b/logo.png">
+            <span class="logo_name">TresBeaux</span>
+        </div>
+        <ul class="nav li a nav-links">
+            <li>
+                <a th:href="@{/stylist/stylistprofile}" class="active">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">My Profile</span>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/stylist/stylistassignedwork}">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="links_name">Assigned Work</span>
+                </a>
+            </li>
+            <li sec:authorize="isAuthenticated()" class="log_out">
+                <a th:href="@{/stylist/logout}" >
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+
+        </nav>
+        <div class="home-content">
+            <h1>&nbsp; &nbsp;Welcome <span class="stylistname">Stylist</span>,</h1>
+            <div class="container">
+                <table>
+                    <tr>
+                        <td>
+                            <section>
+                                <label for="fileToUpload">
+                                    <i class="fa fa-camera"></i>
+                                    <input type="file" id="fileToUpload" style="visibility:hidden;"
+                                        accept=".png,.jpg,jpeg,.PNG,.JPEG" name="fileToUpload"
+                                        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </label>
+                                <img src="https://i.ibb.co/yNGW4gg/avatar.png" id="blah" alt="Avatar">
+                            </section>
+                            <h1 class="stylistname">Bharadwaj</h1>
+                            <h3>Junior Stylist</h3>
+                        </td>
+                        <td>
+                            <ul id="stylist">
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            </section>
+
+            <!--JAVASCRIPT-->
+            <script src="/js/stylist.js"></script>
+            <script src="/js/stylistprofile.js"></script>
+            
+</body>
+
+</html>

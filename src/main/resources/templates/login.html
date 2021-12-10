@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link href="/css/index.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+<div class="topnav" id="myTopnav">
+<div class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;" alt="LEVIOOSA MARKETING.">
+</div>
+
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></div>
+<a id="refer" th:href="@{/outservices}">Services</a> 
+<a id="refer" href="/" th:href="@{/stylist/stylistLogin}">For Stylist</a>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/landing}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+	<br>
+	<br>
+	<div class = "container">
+		<div class = "row">
+			 <div class="col-lg-10 col-xl-9 mx-auto">
+				<div id="errorlogin"th:if="${param.error}">
+						<div class="alert">
+  <span class="closebtn" onclick="$('#errorlogin').hide();">&times;</span> 
+  <strong>Alert!</strong> Invalid username or password
+					</div>
+					</div>
+				<div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+          </div>
+          <div class="card-body">
+          <h5 class="card-title text-center" id="new">Welcome,again!!</h5><br>
+            <h5 class="card-title text-center"><b>LOGIN</b></h5><br>
+				<form id="loginForm" action="/user/loginSecure" method="POST">
+				
+					<div id="logouts"th:if="${param.logout}">
+						
+					 <span class="closebtn" onclick="$('#logouts').hide();">&times;</span>
+						<div class="alert alert-info">You have been logged out.</div>
+					</div>
+					
+					<div class="form-label-group">
+						<input type="email" class = "form-control" id ="username" name = "username"
+						placeholder="Enter Email" autofocus="autofocus">
+						<label for ="username"> User Email </label> 
+					</div>
+					
+					<div class="form-label-group">
+					<input type="password" id="password" name="password" class="form-control"
+							placeholder="Enter Password" />
+							<label for="password">Password</label><br>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="login-submit" id="login-submit"
+									class="form-control btn btn-primary" value="Log In" /><br><br>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="form-group">
+						<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; New user? <a href="/" th:href="@{/registration}">Register
+								here</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/login.js"></script>
+</body>
+</html>

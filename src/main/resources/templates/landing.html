@@ -1,0 +1,183 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link th:href="@{/css/landing.css}" rel="stylesheet" />
+
+    
+</head>
+<title>Landing</title>
+<body>
+<div class="cover-5">
+      <header>
+        <ul class="items">
+          <li class="item">
+           <a id="refer" href="/" th:href="@{/user/login}">Book Services</a> 
+          </li>
+          <li class="item">
+            <a id="refer" href="/" th:href="@{/outservices}">Services</a> 
+          </li>
+          <li class="item">
+           <a id="refer" href="/" th:href="@{/stylist/stylistLogin}">For Stylist</a> 
+          </li>
+          <li class="item">
+            <a id="refer" href="/" th:href="@{/user/contact}">Contact</a>
+          </li>
+        </ul>
+      </header>
+      <div class="container">
+        <div class="left">
+          <img class="header-img" src="https://i.im.ge/2021/08/13/m4tgf.jpg" alt="m4tgf.jpg"/>
+        </div>
+
+        <div class="right">
+          <h3 class="new">
+            <span></span><br />
+            BLOSSAM INTO A NEW YOU
+          </h3>
+          <p class="sub-heading">
+                            <i>Hair can be red, hair can be brown, come on in and we'll change your crown</i>
+            
+          </p>
+        </div>
+        <div class="left">
+          <img class="header-img" src="https://i.im.ge/2021/08/13/m4tgf.jpg" alt="m4tgf.jpg"/>
+        </div>
+      </div>
+        <h3 class="set new">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Why Tres Beaux is so awsome</h3>
+        <p class="set1" id="new1">This is why Tres Beaux is so awesome, you'll never need another one!</p>
+      <section class="section2">
+<div class="cards">
+<div class="card">
+<img src="https://media.istockphoto.com/photos/beautiful-woman-with-voluminous-curly-hairstyle-picture-id1189891152?k=6&m=1189891152&s=612x612&w=0&h=ivYv75ImdisDEXYu92DPdG1ygsR-YB7k_V6bA1cMx1w=" alt="">
+<h5 class="sub-title new">Hair Styling</h5>
+<p>Great hair doesn't happen by chance, it happens by appointment! So, Don't waste time.Hurry!!</p>
+</div>
+
+<div class="card">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISEhISEhIYERISEhISGBERGBgZERIaGBgaGRgYGBgcIS4lHB4rHxgYJkYmKy8xNTU1GiQ7QDs0Py40NjEBDAwMEA8QHxISHjErJSw2NTQ0MTQ0NDQ0MTc0NDQ0NjY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NTQ0NDQ0NP/AABEIAMIBAwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIEBQYDB//EAEEQAAIBAgMFBgMDCwEJAAAAAAECAAMRBBIhBTFBYXEGEyJRgaEyQpEzUsEHI2Jyc4KxstHh8EMUFTVTY5KiwvH/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAlEQADAAIDAAIBBAMAAAAAAAAAAQIRIQMSMTJBIgQTQlGBkbH/2gAMAwEAAhEDEQA/APSAI8CAEcBJLABFAigRQIAlolo+JAGkRCI4iIRAGxsfEgHKq1pywxuSetvSLi2sD5nQRaItu3DSASM1o9BeR6b314CSKZsLwQdbxROGYzqkAeDCAhAGMvGIJ0InMi0AUQgIQAhFhAEiRYQBIQiQBYsbC8AdCJeF4AsIkIByAjhEEUQSLFhCAEIsIAkaY+JAGERrmwvHkSPj3K03YC+Vc1ump9oByxAuyjhc+0497YOevtpFw75uN99j5jSxlZisTlFQHztfqf7wMFzhtEv5wxNYgKBxEhnFBaa35SsxW2EaqqCxIAOp5wMGkp1RbfO6PeQ8LVDAaD0sZNS0EHUGLEEWAERxFhAOYiwYRBAHQiRYARIsIA2JHRpgCQvAxIJFvC8SEEDoQhAGxYkUQSLAQgIAsIRYAkIsIAlpzqJmVl8wR9RadYQCg2fUORQ3x0x3bjj4Dlv6gA+spO0FQI++yvYX8iNf7yR2gxHcVzUQ2DHW24MAMwPUZZWO/wDt1RFAsqWZyPh5AnnIyWx9ljRVqlOwa3k34yPU7JPWqCotQ0QB9oNXPSaLAYUeXhHuZbKJJXJR4TZ1WgABVaqun2mrD6SxpVmvYj6SZcTO9o+0WHwQ1JqVTqKFIZnbmR8o5mB6aJHvOoMyWw+2eFxIUNmw9RtO7rjKQb2ADfCb6ceM09JwyhkYMpFwQbgjkYIw0d4RqtHQAM5TpGNAFEWMBjhAFhCEAI0x0SANMbHmNMASEIogkWEIQQNEBEiwSOhEiwBYRBFgCwiRYAQhFgg8y27ji9XEU957wVFHHijAf+P0l1srZvcBaQ+NvzlQjzPy3HoPQyJhtmj/AHhWrN9nhy78i5NkU9NT+6Jo9irnXvCbmozNfkpKgfxMqi7ZZ0KeVQOU54rFJTRnqOERRdmY2AnWtUCKWOgAnlm0trnG4jNUYjDU2JSmNzZfnbmdSPIHziqwRMuma59r1MQbU70aIJvUP2lQcvuKd99/SQ1oYOi2ZiiuzElmN3YkakneTPM9q9pqlclQ2SiLhUU/FY72PHpuEZQexB89RK4b9L5S8PYMGMNXv3YSoBYHS41Gg1El09n93Y0WNK3yrrTPndDoOosZk/yeuWqVEJ0VM3W5H9J6CslSQ7ZFoY9gctZAnlUXWm3Xip66c5Yg/SRaqaH/AC8rKWK/2Z1U/YMQv7Ik6H9Q+3Tczj0jqq2i+iEQHKKZcochHAxh3xQYA+LGgx0AIQgYAhjY6JAEigQiwAhCEA5RYkWCRYsbFgCxYkIAoixIsAIQhAMz2jRaKVGQG9ds7W4FFA/zrLfZlMrTpg3uqIuvJRf3vOG28OHNAkXUVGzchkJ/9ZPonf1MhB+GT/KLtI08OKKG1Su3d/u2u5+lh+8J5ntPFLQpOlxndbBfmsTqT5Caf8pONYVyynWlTVE42dzmY26BJ5plLsXqMzXN2fVj9ZRrLyap4nC9YyhfdLqkDoD8ot6yx2Rgtl1FAepVR/veEX+oMvMT2UUUnq0q4qBVLhQmrgbxfNvteMop0Zcfk3Az17/FlS3TW9/aeggTAfk/QBqtT9CkvTVyfw+k2WJ2rSp/G4UWvc6Wlsojq34TrSDjcNcHyPA7jKl+2eDB0rA6kaAkC3PdJuG2/h6ugfQ/Nw/tIbT0TM1O8DtiYxg7YepvQZka/wASXtbqpsOhEu5nsamR6dZf9NsxPmh0f219BL9WuAYl6wxa3lDXjRHPGiXKDwY4TmI8QB0IkIAQhCAEIQgBCEIByEICEEiwiRYAsWNEWALFiRYAsIkWAR8ewFOoW+EKSeQ4+05rUGQnhqZ2xKZkdTxUiVG1MV3eHqPfcjG46QSlk8t7QOMZWdi3gNepp5hDkH8vvOy47D4ZRTyAny09yZFwGEZkRuIXP6vdj7tI1HZ9VsT3gFyvA8Zyt5rbO1LE5S2WgSjVPhp0i/FLslQ33AZkAJ9eMs8PtJaQAAKW0KtvUjgRwO+J2f2G9Ny9RgQ7IzI6BtwIYZt4zXN9++cu0OzyoF3DkM1jYhgh+FGJJzZbbzraQ/NMTlvDRutjJTNPPTUKH8Ryi1yeMh7WwtMqxqfDbXX2+skdnDbDov6IjttYU1Kfh0trLezkolisGFpYrCipbuk0JyhyzHTeAqowHS802BxWGqAAU0F72KZGQ232K6ekpTsaq1c1qZVRkKCmUDKNFAtfdYi9xbfLtdhFsQte2Q92qvbfUZfmYbr84S1lMs3+WGsIt8LTspS+ZCDYHW1946Tv2ax4rUFPFGek3nmpsUP1y39YJRyzOdj8S1LGYzCsNDUaunl4j4h/KfUzSHvZhyLK0bdjpGxTxiTUwFEcI0RwgkdFiCLBAQhCAEIQgBCEIByEIkWCQhCEAWKI2LAHQiXhAHQiQgA249DMX2trEYGsf+m02swfb+qtHDVqZ31AQg4nPuA9T7SteF49KLY4BsLXBC7uk12C2UpAOQe0yHZpsyUm4FUFuYFjeelYQeEHlMZhPbN+Tlc6RFGByjRQJhu0tQmqKfG9rT0XFVAiMxNrCeZ4qquZ8UzqqrUIzMdNGtlkciSwkTw06y2brYlMrSQH7olgzAAliAALknQDqZXUNq0loiozAIQtiLneL6W3yL2hC1sHUam2bwh1KHiCLHThJlrSIpPLbRaIKbeJcrC9sykEfUTuo5TyvZe2XplbHKwN8w6DTyI0mxodoHCByVqqRfQZag6jcfaadf6M+/8AZoXmd0GPpuo1LMrNyKbv+5RFpdp6buq5GuzhBbhfQX9ZOwlMMwYjdrfmSCPcSlJpovLTTNBeAiCccTi0pgZzq25RvNt9ps3jbOdJt4RIEcJX4PaqVaz0VBz00p1HOmVA5IRTr8RyseglkITyQ008MBFhCSQEIQgBCEIAQhCAcYRIsEhFiQgC3hEiwAi3iTL9udtYnBUFr0EV6d2SoxBz0swAp1V4WVr3BBvdecAmbG7U0cU1RER6dSjUdKlN8udCpsdx8QvxEvlYEAjcZ532B2gMWKtWoiDGo2WpVRVVq2mjNlAvcenlN5hnFrcrj8R6GUVZZrUJSmiTMX+UvZ1StQpmkhYo5DFRdgCNPS82kJNLKwUiutJnlfZXDVKdPu6iFGVs65gQWU8Rfhcz0HDNZF6SD2sXKKNb7lQ02/VccehUR+Aq3W3laUX46NL/AD/LBU9otq3bu14b+vlMzS2NSdvGwQOfEL2DX8/Ode0hFFy7vkXNYsQTYk6kgCctn4nBEjNjaIYsu9id/wCkbCYPtTyd8TxzKy8f9Nts3D06SrTUg0woA1FhbQWlqiKAbAWPvMimLwKNlO0aIGUH40368+QkLE9scNh7MuKSsLXKqrX3gWtltfW++9gfKXlNfRlcxXlf70Re1uyhRrFwLUqt2GXTKw+Ie4MraNYAFb/0H9ZqtqbQpY3AGtTNxoyn7pByka7tCRPP3e1rbz9ZtNZRx3PVmp7O0e8rBrXy5iD5gCw9yPpNphagsEIKvuKH4gfx6zNdiADUqWHhRkp38yozN7mb2Q57POSVXVYwKu4ecyeP2iHrlh4gD3SKONj4m6E+wEuO0WO7nDuQbPUtTU8QW3kdFzH0lDsSguYVKhCj4UXjYcpTlryUa/ppxmmW2zaYoVLIt6mLqB2vf4UVVZ+QChVA3XYec0YkPBPTcsVIZ0PdtbemgbIfI2Km3STJrKwjnt5psUQhCWKBCEIAQhCAEIQgHAQhCCQhCEAWESLACcq1NXVkdQ6MCrIwBVgdCCDvBE6GNMA8xw+EfZu02p0lNSnUUPlp6siOxy5gN2UggX3gT0Wm48LruOvQ8faUXarZTO1LGUTlrYUNmX/nUvidDzBGYc7jjeWuCrLURaiEFHAJtwvxmDXWjpVdo374WwMW8jUH+U719xwne82Tyc7WHgi7VwgrUalM/MunJhqp+tpmuz9c/C2jKSjA7wR5zXEzI7WdaONAHh72mrnyLXKk+w+spemmacf5Jz/kr+2+EVlOYZlIJI9LGeb4bYDBzbxITdXtpbmeB4T1zbSd5TVt9vDM1gsM9B9AWpk30vmQ+mtpz03LePs9P9N0uUr9Xhn8P2bBKnKbHjbynev2Q7+qlNfABZqj23Dy/WM2yYlSLLVYLxANifXfJrVKdBDVfwINQPmc8OZJ+sTlvTNOWpmX2SwUHaSnTweEpYakAgdrWvY2UZmPPxZfrMRgizVFAXM5NlXzY7v4X6CW3aPFVK9Q1GPmiIdQi30AHE7z56y07J7D7vLUb7WoMoHBQTdmnR8UeS2+Ssml7M4AUqeRdyb24u5OZ26k/wAZqZGo0UpU9bKqAsWblqSZhNvdp6tRmNF2p010UKSrHhmb+kh0oW/SZ465qePES+0ONGIrKBfuaDOM3B23E891h/eXGwcEbCrU+NgAq8FHCU3ZvBGoULD83Tta/wAx8+c2tFBvA3aD8ZnKdV2ZtyUuOeqE2XgloUxTUltWdnPxVHdizuepJ04aDhJgMYDFBnScQ+8W853i3gD4sYDHCCBYQhACEIQDhCNhBI6EIQAhCEADGGOJnCpWVd5kNpBJseZjtmk4LFVMM7fm2s9K+7IxNh1U3X0mnbG0xxme7ZLTqURWpn87hiagPmnzr0sL/u85nblrTNuLMvDWmaQvlGYC9gSB5/ozvQrrUUOpuD/ljzlH2e2glakrKbgjcd4PEGS66tRzPTF1IJZPO3zKPPlxkTWN/Ra4T19lreec/lFxeXE4fIfHTpkn95tx9B7yTtHttkU5Dc200AEwGK2i9eq9RySWsdeWkpycqqcIvw8Tmss9F2TtRatOxOttRxEs8NQVtb29J51s6u1MhkNiPoes2my9tU3AzHI1rENuv5g+Uzm09Ua8nE53JO2pempyEd4RcMwuB6ceMpsXSBy1Ktc1MoNr2VR0A/8Ass9rMtQqyOhKqVIJGt9dDMi2yGd/zla6DdTok3bzDOdAOl/SbqolHPUclMn4PBU6j98/2aEqgHztuNv4fWajZa+MO2m6wG4AcBKzB4bRRlCqgCqi/CoG4CTqmNWmNBmN8um4HmZhXI3WTeeLE9V6c+3mPdaaUKZGaoczjjkGij1b+WVmzdiGoUVxcWDHTwjX3OklbNwve1XqP42LaM34chumspItNd0vh2+zDpcUqZ9OdPDhAEUAcNOEmKLADykB8QVObeTprwnN9oMPKaKpk5qmqLSOvKUY+oeIHoJ3p4t+vUS37klf2qLS8AZFTFeYtzEkqwOollSfhRy16PEcIwRwlio6LEiwAhCEAjQiQvBIsdG3hAHSHUxovlX6/wBJG23j+7UID4n9hKrDsWsZjycmHhG3Hx5WWXGJx6qNN8pMVta0mNRvKnaGE4zCqpm0zKOT7aHEXE5viqdQEB7ZgQQeIIsZRY2mVvKSrWZG0Mpls2UosuzG2Hwz92TdCxU8iDPVcBiVqIDynjeEKVGynwub/vcbjnN72XxRUBGP9rTaa2UudDu03YunWLVKR7uoxuRvpt5nLwPT6TzzHbGrYVyKqZQdFddaba8G/A2M9ypuGEiY/AJUVldQ6MLFWFwZNcf2ikc31R5NgUvaWdFNZK2rsQ4Vs6XaiT6078CeI5/4TCJc3nK008M7FSayjqlKTMPRAnJ7CPbEZUJG/cPWQiG2yW9T5FNvvMOHIc4lGj3pCrpTXS/3unKRcKpqEIuicTxaajAYUKBpa03iexjyV1R1weFCAabo7EVL6cJ3drCQ3beTNqxKwjlnNPLIOLxFjbjIquTOFVyXJPnJOHS85u2WdPXCO9MSbRWR0STaSy8lKZ2VI5WKnlHLBhN0sHO3kkqbx4kfDHQjyMkCap5RlSwx0IkWSQEIQgEW8LxsWCRbxbxsIBi9u4nvMWyX0TKvtc+5MtsAllEzeJa+OxH7QzUYPcJxvdM7PJRMySHiqVxJwnKostS0Vl7MrtDB3vMntTCWvpPRcTSveZnauF0Ok53o6JeTBVSQQQbEG4I3gzXbC2tnXgHW2YDjzEzW0cPlJkDDYp6VRai71O7zHETWdorTwz27ZONzAHgZeI4Inn3ZzaS1PhOjDOo/mX8frNnhalwCD6Taa1g57neTrjMKrqysuZGBBHIzIUsEaTMja5WIB+8OB+k3KG4lHtOkM56CZ806yjThv6Zn9oKVXNbSVdKt3lkH3hLTazkJl4GUuAXK9+YnN9nZPhutl4MBV04b5b2tpI2zT4F6CTWndKSk87kputkWs/CRMU9lnXEvYyurPmMxujWJIWS7Syw6aATlQoyahCgk9PWYytmlM6olp1QTjTa8krOiUYUdVimIsGM0Mx2GOren4ySJEwh1fqJKBmk+Gdej4RLwvLFRYRLwgEQRYQgkWEIQDzrE/wDEMR+0P4TV4LcIQnH/ACZ1/wAUThGPCEs/Ci9IVeUe0NxhCYUbyY/avGZevvMIS0F+Tw0fY1j3lPX/AFG/lM9P2Xx6xYTSfTCvC7pbhKraPxt0EIS/J8SvF6Znau6VNHfCE5Ps718T0LZPwL0EsDuhCd0+Hm38in2h8R6D8ZESEJyV6zqn4om05zxXydW/CEJH0QvSTh9wktIQnRPhjfp0Ea8IS7KIMF8/634SYIQl58Mr+QsIQlyoQhCCT//Z" alt="">
+<h5 class="sub-title new">Skin Care</h5>
+<p>Every girl is a QUEEN & QUEEN deserve the right skin CARE.Your beauty is our profession.</p>
+</div>
+
+
+<div class="card">
+<img src="https://www.psypost.org/wp-content/uploads/2021/05/woman-makeup-750x375.jpg" alt="">
+<h5 class="sub-title new">Makeup</h5>
+<p>A makeover for your personality, a makeover of your life.Colour for your beautiful soul</p>
+</div>
+</div>
+</section>
+<br>
+<h1 class="gallery">GALLERY</h1>
+<br>
+<div Class="button-wrap">
+  <a href="#" class="button">
+    HairStyling
+  </a>
+  <a href="#" class="button">
+    SkinCare
+  </a>
+  <a href="#" class="button">
+    BodyCare
+  </a>
+</div>
+ <div class="content">
+  <div class="content-1 active">
+  <br><br><br>
+  <h1 class="new">HairStyling</h1><br>
+  <a href="https://im.ge/i/N1tvc"><img src="https://i.im.ge/2021/08/16/N1tvc.png" alt="N1tvc.png" border="0"></a>
+</div>
+  <div class="content-2">
+  <br><br><br>
+  <h1 class="new">SkinCare</h1><br>
+  <a href="https://im.ge/i/N1EVx"><img src="https://i.im.ge/2021/08/16/N1EVx.png" alt="N1EVx.png" border="0"></a>
+  </div>
+  <div class="content-2">
+  <br><br><br>
+  <h1 class="new">BodyCare</h1><br>
+  <a href="https://im.ge/i/N1Y0J"><img src="https://i.im.ge/2021/08/16/N1Y0J.png" alt="N1Y0J.png" border="0"></a>
+  </div>
+</div>
+<br><br>
+<h1 class="gallery">TESTIMONIALS</h1>
+<main>
+  <div class="slider">
+
+    <div class="slide">
+      <div class="testimonial">
+        <blockquote class="gallery">" 5-star service & haircut! They also use all high-quality products and They seriously gave me one of my best haircuts I've ever had, doing exactly what I had asked for. Everyone was so friendly and ready to help. I'm so happy & relieved to have finally found my new hair salon."</blockquote>
+        <p class="author new">Tanya Sinclair</p>
+          <p class="author"><span>Lawyer</span>
+        </p>
+      </div>
+
+      <div class="slider-img">
+        <img src="https://alcs-slider.netlify.app/images/image-tanya.jpg" alt="Author Image">
+      </div>
+
+    </div>
+
+    <div class="slide">
+      <div class="testimonial1">
+        <blockquote class="gallery">"Fantastic, relaxing salon, friendly, professional team and the beautiful setting. I highly recommend it!"</blockquote>
+        <br><p class="author new">JohnTarkpor</p>
+        <p class="author">  <span>Software Developer</span>
+        </p>
+      </div>
+
+      <div class="slider-img1">
+        <img src="https://alcs-slider.netlify.app/images/image-john.jpg" alt="Author Image">
+      </div>
+    </div>
+    </div>
+</main>
+<footer>
+<div class="column">
+<a class="footer_title">TRES BEAUX</a>
+<p class="gallery">Feel the change</p>
+<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+<a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+<a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+</div>
+<div class="column">
+<a class="footer_title">OTHER LINKS</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms & Conditions</a>
+<a href="#">Ticket</a>
+<a th:href="@{/contact}">Contact Us</a>
+</div>
+<div class="column">
+<a class="footer_title">SHORT CUT</a>
+<a th:href="@{/outservices}">Our Services</a>
+<a href="">Our Blog</a>
+<a href="">About Us</a>
+</div>
+<div class="column">
+<a class="footer_title">GET IN TOUCH</a>
+<a title="Address"><i class="fa fa-map-marker"></i> 007, street, Tamilnadu, India - 654345</a>
+<a href="emailto:" title="Email"><i class="fa fa-envelope"></i> tresbeaux@gmail.com</a>
+<a href="tel:" title="Contact"><i class="fa fa-phone"></i> +91 9876543289</a>
+</div>
+
+<div class="sub-footer">
+© CopyRights 2021 TresBeaux || All rights reserved
+</div>
+</footer>
+      </div>
+    <div class="cover-4"></div>
+    <div class="cover-3"></div>
+    <div class="cover-2"></div>
+    <div class="cover">
+      <div class="cover-heading">
+        <h1 class="imsrk new">TRES BEAUX</h1>
+        <span class="dot new">!</span>
+      </div>
+    </div>
+    <div class="imsrk2">Welcome!</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/landing.js}"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Appointment</title>
+<link href="/css/appointment.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!--NAVIGATION-->
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a class="logo">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;">
+                        </div>
+                        <div class="flip-card-back">
+                            <b>TRES BEAUX</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        <ul id="logout">
+            <li sec:authorize="isAuthenticated()"><a id="idClick" th:href="@{/user/logout}">Logout</a></li>
+        </ul>
+        <div class="dropdown">
+<button type="submit" class="dropbtn">Services
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a th:href="@{/user/femaleServices}">Female</a>
+<a th:href="@{/user/maleServices}">Male</a>
+</div>
+</div>
+            <a th:href="@{/user/contact}">Contact</a>
+            <a th:href="@{/user/bill}">Bill</a>
+            <a th:href="@{/user/services}">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+    <main>  
+        <div id="failed">
+            <div class="alert">
+                <span class="closebtn" onclick="$('#failed').hide();">&times;</span>
+                <strong>Sorry!</strong> Slot Time is Un-available!!
+            </div>
+        </div>
+        <div id="bookfailed">
+            <div class="alert">
+                <span class="closebtn" onclick="$('#bookfailed').hide();">&times;</span>
+                <strong>Sorry!</strong> Slot Time is Not Booked!!
+            </div>
+        </div>
+        <div id="booked">
+            <div class="alert">
+                <span class="closebtn" onclick="$('#booked').hide();">&times;</span>
+                <strong>Great!</strong> Slot Time is Booked and Details are shared to mail!!!              
+            </div>
+        </div>
+         <div id="internet">
+            <div class="alert">
+                <span class="closebtn" onclick="$('#internet').hide();">&times;</span>
+                <strong>Please Connect Internet!! </strong>             
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="instructions">
+                <div class="first">Choose a Stylish!</div>
+            </div>
+            <div id="stylists" class="staff">
+                
+            </div>
+        </div>
+    </main>
+
+    <!--FOOTER-->
+    <footer  class="size">
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a th:href="@{/user/contact}">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Copyright © 2021 Name- All rights reserved
+            </div>
+        </div>
+    </footer>
+    <!--JAVASCRIPT-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<link href="/css/stylist.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+<div class="topnav" id="myTopnav">
+<div class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;" alt="LEVIOOSA MARKETING.">
+</div>
+
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></div>
+<div class="dropdown">
+<button type="submit" class="dropbtn">Services
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a th:href="@{/user/femaleServices}">Female</a>
+<a th:href="@{/user/maleServices}">Male</a>
+</div>
+</div>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/landing}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+<br>
+<br>
+	<div class="container">
+		<div class="row">
+			 <div class="col-lg-10 col-xl-9 mx-auto">
+			 <div id="success">
+					<div class="alert">
+					<span class="closebtn" onclick="$('#success').hide();">&times;</span> 
+  <strong>Thank You for registering!!</strong>
+</div>
+				</div>
+				 <div id="Alreadyregistered">
+					<div class="alert">
+					<span class="closebtn" onclick="$('#Alreadyregistered').hide();">&times;</span> 
+  <strong>OOPS!</strong> Stylist already registered!
+</div>
+				</div>
+				<div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Stylist Registration</h5>
+				<form class="form-signin" id="registerForm" onsubmit="registerStylist()">
+              <div class="form-label-group">
+						<input type="text" id="Name" class="form-control"  placeholder="Name" autocomplete="off"
+							required autofocus="autofocus"/>
+							<label  for="name">Name </label>
+					</div>
+
+					<div class="form-label-group">
+						<input type="email" id="email" class="form-control" placeholder="Email" autocomplete="off" required
+							autofocus="autofocus"/>
+							<label for="email"> Email </label> 
+					</div>
+					
+					<div class="form-label-group">
+						<input type="tel" id="number" class="form-control" placeholder="Mobile Number" autocomplete="off" required
+							autofocus="autofocus"/>
+							<label for="number"> Mobile Number </label> 
+					</div>
+
+					<div class="form-label-group">
+						<input id="password" class="form-control" placeholder="Password" autocomplete="off" type="password"
+							required autofocus="autofocus"/>
+							<label for="password"> Password </label>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase">Register</button><br><br>
+						<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Registered Member? <a th:href="@{/stylist/stylistLogin}">Login
+								here</a></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/stylistRegister.js"></script>
+</body>
+</html>

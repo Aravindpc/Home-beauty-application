@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<title>Contact</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--EXTERNAL CSS-->
+<link rel="stylesheet" href="/css/contact.css">
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<!--NAVIGATION-->
+<header>
+<div class="topnav" id="myTopnav">
+<a class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;">
+</div>
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></a>
+<ul id="logout">
+<li sec:authorize="isAuthenticated()"><a id="idClick" th:href="@{/user/logout}">Logout</a></li></ul>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/user/services}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+
+<section class="contact">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <div class="h3">
+                <h2 style="font-weight: 100; padding-top: 20px;">Want to Contact Us</h2>
+            </div>
+        </div>
+        <div class="containor">
+            <div class="contactForm">
+                <form action="javascript:sendemail()" method="POST" id="form">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="Name" id="Name" required="required" autocomplete="off" placeholder="Full Name">
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="Email" id="Email" required="required" autocomplete="off" placeholder="Email ID">
+                    </div>
+                    <div class="inputBox">
+                        <textarea type="text" required="required" name="message" id="message" autocomplete="off" 
+                        placeholder="Type your Message"></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit" value="Submit" class="button">
+                            submit
+                        </button>
+                        <span id="load"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contact us ends -->
+
+    <!-- script starts -->
+
+    <!--this is essential to link this smtp and jquery cdn link-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script>
+	document.getElementById("form").onsubmit = function () {
+        document.getElementById('load').style.display = "inline"
+    }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!--this is essential to link this smtp and jquery cdn link-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+   <script src="/js/custom.js"></script>
+
+
+<!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a th:href="@{/user/contact}">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2021 Name- All rights reserved
+</div>
+</div>
+</footer>
+
+<!--JAVASCRIPT-->
+<script src="/js/custom.js"></script>
+
+
+</body>
+</html> 

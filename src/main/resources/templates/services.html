@@ -1,0 +1,187 @@
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Services</title>
+
+<!--EXTERNAL CSS-->
+<link rel="stylesheet" href="/css/services.css">
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<!--NAVIGATION-->
+<header>
+<div class="topnav" id="myTopnav">
+<div class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;" alt="LEVIOOSA MARKETING.">
+</div>
+
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></div>
+<ul id="logout">
+<li sec:authorize="isAuthenticated()"><a id="Logout" th:href="@{/user/logout}">Logout</a></li></ul>
+<div class="dropdown">
+<button type="submit" class="dropbtn">Services
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a th:href="@{/user/femaleServices}">Female</a>
+<a th:href="@{/user/maleServices}">Male</a>
+</div>
+</div>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/user/services}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+
+<div class="container">
+<table>
+<tr>
+<td>
+<section>
+<em>SERVICES</em>
+<h1 class="title">A LOYALTY PROGRAM TO MAKE YOU FEEL LIKE A SHOWSTOPPER</h1>
+<div class="dropdown1">  
+   <a  href="/" th:href="@{/user/appointment}"><button class="dropbtn1">Book Appointment</button></a>
+</div>
+
+</section>
+</td>
+<td>
+</td>
+</tr>
+</table>
+</div>
+
+<section id="service">
+    <div class="title-text">
+      <p>SERVICES</p>
+      <h1>For Women</h1>
+    </div>
+    <div class="service-box">
+      <div class="single-service">
+        <img src="https://images.pexels.com/photos/3760270/pexels-photo-3760270.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Hair Spa</h3>
+          <hr>
+          <p>Add Softness And Shine To Your Tresses While Protecting Them From Uv Damage With This Spa Enriched With Nourishing Oils.</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Facial</h3>
+          <hr>
+          <p>Flaunt Your Natural Beauty While Getting Rid Of Impurities From Your Skin. Packed With Skin Lightening Elements, This Service Will Help You Look Naturally Glamorous</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.unsplash.com/photo-1594051843850-2caa9704b28d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F4aW5nJTIwbGVnc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Waxing</h3>
+          <hr>
+          <p>Your Waxing Needs Are Our Priority .Get Rid Of Unwanted Hair As The Argan Oil Regime Removes It In A Gentle And Nourishing Manner ,Leaving Your Skin Soft And Supple</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.pexels.com/photos/332046/pexels-photo-332046.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Regular Manicure</h3>
+          <hr>
+          <p>This Manicure Will Pamper Your Hands, Leaving Them De-Stressed And Visibly Groomed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section id="service">
+    <div class="title-text">
+    <p>SERVICES</p>
+      <h1>For Men</h1>
+    </div>
+    <div class="service-box">
+      <div class="single-service">
+        <img src="https://i.postimg.cc/8Pz8nsFF/pic-1.jpg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Hair Cut</h3>
+          <hr>
+          <p>Be A Cut Above The Rest With Our Wide Range Of Stylish Haircuts. Trendy And Glam, Its'S Time To Show-Stop Everyday.</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lbiUyMGhhaXIlMjBzdHlsaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Keratin Treatment</h3>
+          <hr>
+          <p>Restore The Natural Beauty Of Chemically Treated Hair With Keratin That Not Only Makes Ot Soft , Strong And Shiny, But Also Protects It From External Damage.</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.unsplash.com/photo-1611072244544-44575bf7d33c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFzc2FnZSUyMGJvZHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>Massage</h3>
+          <hr>
+          <p>Pamper Your Body With A Wonderful Blend Of Herb Essential Oils Like Jupiter Berry And Rosemary. Detoxify It, Leaving It Feeling Alive.</p>
+        </div>
+      </div>
+      <div class="single-service">
+        <img src="https://images.unsplash.com/photo-1590322739578-fb3d9ff41465?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWVuJTIwZmFjaWFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
+        <div class="overlay"></div>
+        <div class="service-desc">
+          <h3>De Tan</h3>
+          <hr>
+          <p>Lost Your Original Colour To Excessive Sun Exposure? Avail Our Detanning Services To Lighten And Brighten Your Skin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul id="footer">
+<li><a th:href="@{/user/contact}">Contact us</a></li>
+<li><a th:href="@{/user/services}">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2021 Name- All rights reserved
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/services.js"></script>
+</body>
+</html> 

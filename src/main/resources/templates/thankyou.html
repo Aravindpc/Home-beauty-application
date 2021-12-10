@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/thankyou.css">
+    
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thankyou For Contacting</title>
+</head>
+<body>
+
+<!--NAVIGATION-->
+<header>
+<div class="topnav" id="myTopnav">
+<a class="logo">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://i.ibb.co/VVP4G0b/logo.png" style="margin:0 10px;float:left;">
+</div>
+<div class="flip-card-back">
+<b>TRES BEAUX</b>
+</div>
+</div>
+</div></a>
+<ul id="logout">
+<li sec:authorize="isAuthenticated()"><a id="idClick" th:href="@{/user/logout}">Logout</a></li></ul>
+<a th:href="@{/user/contact}">Contact</a>
+<a th:href="@{/user/services}">Home</a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+
+<section>
+        <div class="thankyou">
+            <h1 class="h1">
+                Thank You for Contacting Us
+            </h1>
+
+            <p id="okay">
+                Your message has been sent successfully!
+            </p>
+
+            <p id="namedrf2">We will reply you to your Email</p>
+            <div class="anchor" style="margin-bottom: 50px;">
+                <a th:href="@{/user/services}">Back to Services</a>
+            </div>
+        </div>
+    </section>
+    
+    <!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a th:href="@{/user/contact}">Contact us</a></li>
+<li><a th:href="@{/user/services}">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2021 Name- All rights reserved
+</div>
+</div>
+</footer>
+
+
+
+
+
+<!--JAVASCRIPT-->
+<script src="/js/custom.js"></script>
+    
+
+</body>
+</html>

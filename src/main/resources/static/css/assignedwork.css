@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e1e1e1;
+}
+
+div,
+p,
+a,
+li,
+td {
+  -webkit-text-size-adjust: none;
+}
+
+.ReadMsgBody {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.ExternalClass {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+p {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+}
+
+.visibleMobile {
+  display: none;
+}
+
+.hiddenMobile {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: auto !important;
+  }
+
+  table[class="fullTable"] {
+    width: 96% !important;
+    clear: both;
+  }
+
+  table[class="fullPadding"] {
+    width: 85% !important;
+    clear: both;
+  }
+
+  table[class="col"] {
+    width: 45% !important;
+  }
+
+  .erase {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  table[class="fullTable"] {
+    width: 100% !important;
+    clear: both;
+  }
+
+  table[class="fullPadding"] {
+    width: 85% !important;
+    clear: both;
+  }
+
+  table[class="col"] {
+    width: 100% !important;
+    clear: both;
+  }
+
+  table[class="col"] td {
+    text-align: left !important;
+  }
+
+  .erase {
+    display: none;
+    font-size: 0;
+    max-height: 0;
+    line-height: 0;
+    padding: 0;
+  }
+
+  .visibleMobile {
+    display: block !important;
+  }
+
+  .hiddenMobile {
+    display: none !important;
+  }
+}
+
+.tax {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #b0b0b0;
+  line-height: 22px;
+  vertical-align: top;
+  text-align: right;
+}
+.total {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  line-height: 22px;
+  vertical-align: top;
+  text-align: right;
+}
+.calculations {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #646a6e;
+  line-height: 22px;
+  vertical-align: top;
+  text-align: right;
+}
+.bill-details {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #1e2b33;
+  line-height: 18px;
+  vertical-align: top;
+  padding: 10px 0;
+}
+.bill-heading {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #1e2b33;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: top;
+  padding: 0 0 7px;
+}
+.fullTable2 {
+  width: 600px;
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+.fullTable {
+  margin-left: 25%;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+.fullPadding {
+  margin-left: 7%;
+  width: 480px;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.completedcustomer td{
+  margin: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
+  padding: 30px;
+  background-color: #008080!important;
+  color: #fff;
+  vertical-align: top;
+}
+
+.alert {
+  padding: 20px;
+  background-color: green;
+  font-size: 25px;
+  color: white;
+  margin-left: 200px;
+  margin-right: 300px;
+  margin-top: 10px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+ul li {
+  padding: 20px 0;
+  color: gray;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-links li a.active {
+  background: #081d45;
+  /* width: 100%; */
+  top: 10%;
+  position: absolute;
+}
+
+.logo {
+  margin: 0 10px;
+  height: 30px;
+  float: left;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #4caf50;
+}
+
+/* Green */
